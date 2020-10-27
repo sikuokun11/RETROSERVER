@@ -1,0 +1,36 @@
+{
+    "name": "retroserver",
+    "version": "1.0.0",
+    "description": "retroserver",
+    "main": "index.js",
+    "engines": {
+        "node": "12.18.4"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sikuokun11/RETROSERVER.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sikuokun11/RETROSERVER/issues"
+    },
+    "homepage": "https://github.com/sikuokun11/RETROSERVER#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.2.0",
+        "pg": "^8.4.1",
+        "pg-hstore": "^2.3.3",
+        "sequelize": "^6.3.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}
