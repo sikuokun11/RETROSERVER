@@ -6,8 +6,10 @@ const board = require('../models/board');
 const collum = require('../models/collum');
 const card = require('../models/card');
 
-const boardController = require('../controllers/board.controller');
+const userController = require('../controllers/user.controller');
 
-router.get('/', boardController.searchAll);
+router.get('/', userController.searchAll);
+router.post('/login', userController.login);
+router.post('/register', userController.register);
 
 module.exports = router;

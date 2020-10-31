@@ -13,12 +13,17 @@ var cors = require('cors')
 
 app.use(cors());
 
-app.use('/users', require('./routes/userroute'));
-app.use('/boards', require('./routes/board.router'));
-
 // Config cho req.body
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json());
+// parse body neu khong se bi undefine
+app.use(bodyParser.json());
+
+// route 
+app.use('/users', require('./routes/userroute'));
+app.use('/boards', require('./routes/board.router'));
+
+
 
 
 const PORT = process.env.PORT || 5000;

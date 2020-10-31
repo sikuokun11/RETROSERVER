@@ -35,6 +35,11 @@ CREATE TABLE card(
 	CONSTRAINT fk_collum_card FOREIGN KEY(collum_id) REFERENCES collum(collum_id)
 );
 
+BEGIN;
+SELECT setval(pg_get_serial_sequence('"account"','user_id'), coalesce(max("user_id"), 1), max("user_id") IS NOT null) FROM account;
+COMMIT;
+
+
 INSERT INTO account VALUES (1,'TAI','TAN','user01','fxqtai@gmail.com','TANBINH','1234','','');
 INSERT INTO account VALUES (2,'TRINH','TAI','user02','fxqtai2@gmail.com','TANBINH','4321','','');
 
